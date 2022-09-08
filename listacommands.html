@@ -2,9 +2,296 @@
 <title> MS-DOS: Lista de comandos basicos </title>
 <link rel="shortcut icon" type="image/x-icon" href="C:\Users\josmo\Documents\Prueba Sitio Web\media\Msdos-icon.ico">
 	<head>
-		<img src="../media/msdos-cabecera.png" alt="cabecera de MS-DOS" title="Logo de MS-DOS"/ width="230" height ="96"><h2> Lista de Comandos Importantes de MS-DOS </h2>
+		<img src="media/msdos-cabecera.png" alt="cabecera de MS-DOS" title="Logo de MS-DOS"/ width="230" height ="96"><h1> Lista de Comandos Importantes de MS-DOS </h1>
 	</head>
 	<body>
-	
+		<p>
+			A continuación, veremos una serie de comandos con los que podremos interactuar con MS-DOS:
+			<ul>
+				<li>
+				<h2> Movimiento entre unidades de disco</h2>
+				<p>
+					En la época, los ordenadores contaban con tres tipos de unidades de disco:
+					<ul>
+						<li>Unidad de Disquete de 3 1/2, con la letra <b>A:</b></li>
+						<li>Unidad de Disquete de 5 1/4, con la letra <b>B:</b></li>
+						<li>Unidad de Disco Duro, con la letra <b>C:</b></li>
+						<li>Unidad Lector/Grabador de CD-ROM, con la letra <b>D:</b></li>
+					</ul>
+					<br/>
+					Esto se ha mantenido hasta nuetros dias, ya que si nos fijamos en la letra asignada a nuestro disco duro principal, continua siendo la letra C. Actualmente, las unidades de disquete de ambos tamaños
+					han quedado obsoletas, puesto que su capacidad era muy reducida (1.44Mb y 720 Kb, respectivamente), y su velocidad de escritura y lectura era muy lenta. Estos se vieron superados por los dispositivos de almacenamiento USB, una solución barata y con velocidades mucho mayores.
+					No obstante, pese a desaparecer hace años, esas dos letras se siguen reservando a ellas;<b> es más, si conectasemos una disquetera a un ordenador con un Windows actual, como es por ejemplo Windows 11, esta seguiría ocupando la letra A: o B: <i>(<a target="_blank" href="https://www.softzone.es/2016/09/06/windows-se-instala-c-vez-otras-letras-b/"> para los curiosos, aqui dejo un articulo explicandolo mas a fondo)</a></i>. </b> Lo que si seguimos manteniendo en algunos casos es la unidad de CD/DVD,
+					aunque cada vez es mas dificil ver estos dispositivos montados por lo mismo que hemos expuesto para los disquetes.
+					<br/>
+					<br/>
+					<b>En el caso del MS-DOS que instalaremos en nuestro caso, tendremos operativas de forma nativa las unidades A: y C:, es decir, el disco duro y la disquetera de 3 1/2.</b> No obstante, necesitaremos simular la existencia de una unidad de CD/DVD para cargar determinado software <i><b>(Ver página sobre <a href="softwaredos.html">software de MS-DOS</a>).</b></i> Cuando encendemos la maquina, por defecto apareceremos en el disco duro, como podremos comprobar en el interprete de comandos:
+					<br/>
+					<br/>
+					<img src="media/unidades-ms-dos.png" alt="Captura del terminal inicial de MS-DOS" title="Interprete de comandos al iniciar MS-DOS" width="600" height="380"/>
+					<br/>
+					<br/>
+					Para cambiar de unidad, escribiremos la letra de la unidad a la que queremos ir de la siguiente manera:
+					<br/>
+					<br/>
+					<b>A:</b>
+					<br/>
+					<br/>
+					La letra de la unidad puede ser tanto mayúscula como minúscula, que funcionará el cambio de unidad. Una vez escribimos esto, presionamos enter, y nos fijaremos que la letra señalada mas arriba ha cambiado, por lo que ya estamos en la unidad deseada. Este indicador tambien nos ayuda para saber en todo momento en que unidad estamos leyendo los datos.
+					<br/>
+					<br/>
+					<b>IMPORTANTE!! EN CASO DE NO HABER NADA CARGADO EN LA UNIDAD, NO SE PUEDE ACCEDER A ELLA, por lo que antes de cambiar de unidad, tenemos que comprobar que hemos cargado algo en la unidad.</b>
+				</p>
+				</li>
+				<li>
+					<h2>Leer el contenido de Disco</h2>
+					<p>
+						Para poder saber que archivos y directorios hay en una unidad, tenemos que escribir:
+						<br/>
+						<br/>
+						<b>dir</b>
+						<br/>
+						<br/>
+						Una vez introducido esto, nos aparecerán un conjunto de lineas en pantalla; cada una hace referencia a un archivo o a un directorio
+						<br/>
+						<br/>
+						<img src="media/dir-ms-dos.png" alt="Captura del comando <b>dir</b>" title="Resultado de utilizar el comando <b>dir</b>" width="600" height="350"/>
+						<br/>
+						<br/>
+						Como podemos observar en la imagen superior, encontramos varias lineas que nos muestran el contenido total de, en este caso, la unidad <b>C:</b>. En cada linea, encontramos la siguiente estructura:
+						<br/>
+						<br/>
+						<table>
+							<tr>
+								<td><b>Nombre del archivo o directorio |</b></td>
+								<td><b>Extension de archivo |</b></td>
+								<td><b>Si es directorio |</b></td>
+								<td><b>Tamaño (bytes) |</b></td>
+								<td><b>Fecha de modificacion |</b></td>
+								<td><b>Hora de modificacion |</b></td>
+							</tr>
+							<tr>
+								<td><b>------------------</b></td>
+								<td><b>--------</b></td>
+								<td><b>--------</b></td>
+								<td><b>--------</b></td>
+								<td><b>-------------</b></td>
+								<td><b>--------</b></td>
+							</tr>
+							<tr>
+								<td><b>DOS</b></td>
+								<td></td>
+								<td><b>DIR</b></td>
+								<td></td>
+								<td><b>19/11/21</b></td>
+								<td><b>13:27</b></td>
+							</tr>
+							<tr>
+								<td><b>------------------</b></td>
+								<td><b>--------</b></td>
+								<td><b>--------</b></td>
+								<td><b>--------</b></td>
+								<td><b>-------------</b></td>
+								<td><b>--------</b></td>
+							</tr>
+							<tr>
+								<td><b>AUTOEXEC</b></td>
+								<td><b>BAT</b></td>
+								<td></td>
+								<td><b>232</b></td>
+								<td><b>15/02/22</b></td>
+								<td><b>11:21</b></td>
+							</tr>
+							<tr>
+								<td><b>------------------</b></td>
+								<td><b>--------</b></td>
+								<td><b>--------</b></td>
+								<td><b>--------</b></td>
+								<td><b>-------------</b></td>
+								<td><b>--------</b></td>
+							</tr>
+						</table>
+					</p>
+				</li>
+				<li>
+					<h3>Directorios</h3>
+				<p>
+					El directorio lo podemos tratar como una carpeta en la que podemos guardar archivos de cualquier tipo. Si queremos entrar a él, debemos introducir lo siguiente:
+					<br/>
+					<br/>
+					<b>cd (nombre del directorio)</b>
+					<br/>
+					<br/>
+					Por ejemplo:
+					<br/>
+					<br/>
+					<b> cd dos </b>
+					<br/>
+					<br/>
+					Asi, veremos que el indicador de la unidad en la que nos encontramos cambia, y a este se le suma el nombre del directorio.
+					<br/>
+					<br/>
+					<img src="media/cd-dir.png" alt="Captura del comando <b>cd dir</b>" title="Resultado de utilizar el comando <b>cd dir</b>" width="600" height="350"/>
+					<br/>
+					<br/>
+					Una vez dentro del directorio, podemos escribir otra vez el comando <b>dir</b>, y veremos que nos aparece en pantalla todo lo que hay dentro de este.
+					<br/>
+					<br/>
+					Para salir de un directorio (es decir, volver hacia atras un paso), debemos utilizar el siguiente comando:
+					<br/>
+					<br/>
+					<b>cd..</b>
+					<br/>
+					<br/>
+					<img src="media/cd-atras.png" alt="Captura del comando <b>cd..</b>" title="Resultado de utilizar el comando <b>cd..</b>" width="600" height="350"/>
+					<br/>
+					<br/>
+					La flecha de color roja indica el punto de inicio, y una vez utilizado <b>cd..</b> tenemos como resultado que hemos salido a el directorio de inicio (flecha verde)
+					<br/>
+					<h3><b>Crear un directorio</b></h3>
+					Para crear un directorio, lo haremos de la siguiente manera:
+					<br/>
+					<br/>
+					<b>md nombredeldirectorio</b>
+					<br/>
+					<br/>
+					Ejemplo:
+					<br/>
+					<br/>
+					<b>md DirectorioNuevo</b>
+					<br/>
+					<h3><b>Destruir un directorio</b></h3>
+					Antes de destruir un directorio, debemos saber que existen dos posibilidades: o bien nuestro directorio esta vacío, o bien contiene archivos o subdirectorios dentro.
+					<br/>
+					<h3><b>El directorio se encuentra vacío</b></h3>
+					En este caso, unicamente tenemos que aplicar el siguiente comando:
+					<br/>
+					<br/>
+					<b>rmdir nombredeldirectorio</b>
+					<br/>
+					<br/>
+					Por ejemplo:
+					<br/>
+					<br/>
+					<b>rmdir DirectorioNuevo</b>
+					<br/>
+					<h3><b>El directorio se encuentra con archivos</b></h3>
+					El procedimiento en este caso es el mismo, pero antes debemos eliminar los archivos que se encuentran en su interior:
+					<br/>
+					<br/>
+					<b>del nombredeldirectorio</b>
+					<br/>
+					<br/>
+					Ejemplo:
+					<br/>
+					<br/>
+					<b>del DirectorioNuevo</b>
+					<br/>
+					<br/>
+					Una vez hecho esto, realizamos el borrado al igual que en el caso de un directorio vacío.
+				</p>
+				</li>
+				<li>
+					<h3>Archivos</h3>
+					<p>
+						En los tiempos en los que MS-DOS estuvo vigente, las extensiones usadas mas comunmente eran pocas, por lo que de manera nativa, este solo reconoce un numero muy pequeño de ellas.
+						De estas que reconocía por defecto MS-DOS, nosotros utilizaremos unas pocas.
+						<br/>
+						<h3><b>.BAT,.EXE y .COM</b></h3>
+						Estos dos tipos de archivo sirven para la instalacion o ejecución de software, al igual que en los windows actuales. Al acceder a ellos, nos aparecerá un instalador o directamente se abrirá el programa deseado. Para ejecutar estos escribiremos lo siguiente:
+						<br/>
+						<br/>
+						<b>nombredearchivo.bat </b>, <b>nombredearchivo.exe</b> o <b>nombredearchivo.com</b>
+						<br/>
+						<h3><b>Lectura mediante el uso de edit</b></h3>
+						En MS-DOS y a partir de cierta versión, el sistema cuenta con un editor de textos (MS-DOS Editor). Con el podemos editar cualquier archivo, sea de texto o no.
+						Por ejemplo, si deseamos editar un archivo .txt, escribimos lo siguiente:
+						<br/>
+						<br/>
+						edit nombredearchivo.txt
+						<br/>
+						<br/>
+						De esta manera, se nos abrirá lo siguiente:
+						<br/>
+						<br/>
+						<img src="media/edit.png" alt="Captura de la pantalla de MS-DOS EDITOR" title="Pantalla de MS-DOS EDITOR" width="600" height="350"/>
+						<br/>
+						<br/>
+						Aqui podremos editar el texto de la manera deseada. Si queremos acceder a las opciones de la barra de navegación de la parte superior, tenemos que pulsar la tecla <b>alt gr.</b> Si aqui entramos al apartado <b>archivo,</b> tenemos varias opciones como guardar o salir del archivo.
+						De la manera expuesta arriba, podemos editar cualquier archivo de cualquier extensión.
+						<br/>
+						<h3><b>Lectura del contenido de un archivo mediante TYPE</b></h3>
+						Si deseamos leer el contenido de un archivo, sea texto o codigo, utilizaremos el comando <b>TYPE:</b>
+						<br/>
+						<br/>
+						<b>type nombredearchivo.txt</b>
+						<br/>
+						<br/>
+						En este momento, todo el contenido del archivo se vera en pantalla.
+						<h3>Renombrar un archivo</h3>
+						Para renombrar un archivo, debemos:
+						<br/>
+						<br/>
+						<b>rename nombreactual nombrenuevo</b>
+						<br/>
+						<br/>
+						<img src="media/rename.png" alt="Captura de la pantalla de MS-DOS EDITOR" title="Pantalla de MS-DOS EDITOR" width="600" height="350"/>
+					</p>
+				</li>
+				<li>
+					<h2>Copias</h2>
+					<p>
+						En el apartado de copia, tenemos que tener en cuenta si lo que copiamos es un directorio o un archivo.
+						<br/>
+						Si lo que queremos es copiar un directorio entero a otro, como copiar el contenido de la disquetera a un directorio en el disco duro, debemos:
+						<br/>
+						<br/>
+						copy <b>a:\ c:\DirectorioDestino</b>
+						<br/>
+						<br/>
+						Tenemos dos partes bien diferenciadas en el ejemplo: por un lado, encontramos la ruta donde se encuentran los archivos de origen <i><b>(a:\)</b></i>, y por otro lado encontramos la ruta del directorio destino, que es a donde van a ser guardados los archivos <i><b>(c:\DirectorioDestino).</i></b>
+						<br/>
+						<br/>
+						<img src="media/copy- directorio -  directorio.png" alt="Captura de la pantalla del comando COPY" title="Resultado de aplicar el comando COPY" width="600" height="350"/>
+						<br/>
+						<br/>
+						Como vemos en la imagen superior, estamos copiando el contenido de la unidad <b>D:</b> en un directorio que hemos creado dentro de la unidad <b>C:</b>, llamado <b>PRINCE.</b>El comando de copia lo podemos aplicar desde el directorio en el que estemos situados; es decir, no hace falta desplazarnos hasta el directorio <i><b>D: o C:\PRINCE</i></b> en este caso, sino que podemos hacerlo desde donde nos encontremos en ese momento.
+					</p>
+				</li>
+				<li>
+					<h2>Ayuda sobre un comando</h2>
+					<p>
+						En caso de que deseemos saber mas sobre un comando, y las funciones que posee, escribimos lo siguiente:
+						<br/>
+						<br/>
+						<b>nombredelcomando/?</b>
+						<br/>
+						<br/>
+						Por ejemplo:
+						<br/>
+						<br/>
+						<b>dir/?</b>
+						<br/>
+						<br/>
+						<img src="media/help.png" alt="Captura de la pantalla de HELP" title="Opciones extra del comando DIR" width="600" height="350"/>
+						<br/>
+						<br/>
+						Entonces nos aparecen una serie de "opciones" que podemos utilizar con tal de adaptar el comando a lo que queremos. Por ejemplo, si queremos que salga la información del disco en formato ancho, haríamos:
+						<br/>
+						<br/>
+						<b>dir/w</b>
+						<br/>
+						<br/>
+						Otra opcion de gran utilidad es una que nos permite buscar segun la extension de archivo. Esto nos sirve, por ejemplo, para encontrar el .exe de un programa, y asi poder ejecutarlo:
+						<br/>
+						<br/>
+						<b>dir *.exe</b>
+						<br/>
+						<br/>
+						<img src="media/searchextension.png" alt="Captura de la pantalla de Busqueda por extension" title="Busqueda por extension" width="600" height="350"/>
+					</p>
+				</li>
+			</ul>
+		</p>
 	</body>
 </html>
