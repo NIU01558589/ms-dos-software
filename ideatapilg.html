@@ -7,8 +7,8 @@
 	<body background="media/fondo-verde-galaxia.jpg">
 		<h3>Instalación de los drivers del Lector de CD/ROM</h3>
 		<p>
-		Como comenté en la pagina sobre comandos, en el apartado de unidades<a href="listacommands.html"><i><b>(Que puedes consultar aqui)</i></b></a>, necesitaremos simular la existencia de una unidad para poder cargar
-		software que se encuentra en otros archivos diferentes a los habituales.<i><b><a href="softwaredos.html">(Como podemos ver en la pagina sobre Carga del Software).</a></b></i> A continuación, vamos a ver su instalación:
+		Como comenté en la pagina sobre comandos, en el apartado de unidades <a href="listacommands.html"><i><b>(Que puedes consultar aqui)</i></b></a>, necesitaremos simular la existencia de una unidad para poder cargar
+		software que se encuentra en otros archivos diferentes a los habituales.<i><b><a href="softwaredos.html">(Como podemos ver en la pagina sobre Carga e Instalacion del Software).</a></b></i> A continuación, vamos a ver su instalación:
 		</p>
 		<ol>
 			<li>
@@ -27,8 +27,22 @@
 				Ahora necesitamos cargar estos archivos a nuestro MS-DOS instalado en VirtualBox. En un ordenador con el sistema operativo instalado de forma nativa, es decir, un ordenador de la época sería tan fácil como meter un disquete o un CD, pero nosotros debemos hacerlo mediante las opciones que nos da VirtualBox. Como los dos archivos que tenemos son <b>.IMG</b>, eso significa que se pueden cargar en la unidad de disquete <a href="softwaredos.html"><i><b>(De esto hablo más en profundidad en el apartado de Instalacion de software)</b></i></a>
 				Para hacer esto, tenemos que iniciar la maquina virtual de MS-DOS, y una vez ha cargado todo, presionaremos lo siguiente:
 				</p>
-				<img src="" alt="" title="" width="600" height="380"/>
+				<img src="media/carga-disquete.jpg" alt="Boton de carga de disquetera" title="Carga de la disquetera en VirtualBox"/>
 				<p>
+				Este simbolo que vemos es el que nos hace referencia a la disquetera. Para acceder a ella, haremos clic derecho sobre ella, y se nos abrirá un desplegable.
+				</p>
+				<img src="media/seleccion-de-archivo.png" alt="Buscar archivo deseado" title="Opcion a seleccionar en el desplegable" width="600" height="350"/>
+				<p>
+				Una vez seleccionamos la opción de la pagina de arriba, se nos abrirá una ventana del navegador de archivos. Buscaremos la carpeta donde se encuentran los drivers, y una vez dentro, seleccionamos el archivo <b>cdrom.img.</b> Una vez lo seleccionemos, veremos como el simbolo del disquete se encuentra más marcado.
+				Ahora, dentro de MS-DOS nos cambiamos a la unidad <b>A:</b>.Si no tienes claro el tema de las unidades de MS-DOS, te recomiendo que repases el apartado de <a href="listacommands.html"><i><b>unidades</b></i></a>. Dentro de la unidad hacemos un <b>dir</b>, y veremos que disponemos de un archivo llamado <b>install.exe</b>
+				</p>
+				<img src="media/install-cdrom.png" alt="Captura del Instalable del driver de CD" title="Instalable del driver del CD" width="600" height="350"/>
+				<p>
+				Texteamos su nombre y hacemos enter. Entonces nos saldrá la siguiente pantalla:
+				</p>
+				<img src="media/graphic-atapi.png" alt="Captura del proceso del driver de CD" title="Proceso de instalación del driver del CD" width="600" height="430"/>
+				<p>
+				Presionamos enter para continuar con la instalación. Entonces nos aparecerá una pantalla donde nos mostrará que se está instalando, y posteriormente un mensaje que nos dirá que la instalación ha sido staisfactoria. Presionamos enter, y saldremos del instalador.
 				
 				</p>
 			</li>
