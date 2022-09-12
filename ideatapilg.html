@@ -42,13 +42,38 @@
 				</p>
 				<img src="media/graphic-atapi.png" alt="Captura del proceso del driver de CD" title="Proceso de instalación del driver del CD" width="600" height="430"/>
 				<p>
-				Presionamos enter para continuar con la instalación. Entonces nos aparecerá una pantalla donde nos mostrará que se está instalando, y posteriormente un mensaje que nos dirá que la instalación ha sido staisfactoria. Presionamos enter, y saldremos del instalador.
-				
+				Presionamos enter para continuar con la instalación. Entonces nos aparecerá una pantalla donde nos mostrará que se está instalando, y posteriormente un mensaje que nos dirá que la instalación ha sido satisfactoria. Presionamos enter, y saldremos del instalador. Ahora, para comprovar que funciona correctamente, nos cambiamos al directorio <b>D:</b>. Si esto se produce, hemos instalado todo correctamente.
 				</p>
 			</li>
-			<li></li>
-			<li></li>
+			<li>
+				<h4><b>Instalación del driver de MOUSE</b></h4>
+				<p>
+				Pese a que MS-DOS no tiene soporte nativo para ratón o mouse, si que existen drivers que nos permiten implementar esta función. Para instalar esto, hacemos <b>click derecho</b>
+				sobre el icono del CD 
+				</p>
+				<img src="media/cd-ide.png" alt="Simbolo del lector de CD IDE" title="El simbolo del lector de CD se encuentra marcado en rojo"/>
+				<p>
+				Seleccionamos la opcion del desplegable de <b>Seleccionar un archivo de disco</b> (la misma que en el apartado anterior sobre la instalación del driver del lector de CD), y entonces seleccionamos MOUSE.ISO, que es el driver. Entonces nos movemos a la unidad de CD <b>(D:)</b>, y hacemos <b>dir</b>. Veremos que solo nos encontramos un archivo llamado <b>MOUSE.COM</b>. Para instalarlo solo debemos ejecutarlo, y una vez damos enter, nos saldrá un mensaje como el siguiente:
+				</p>
+				<img src="media/mouse-install.png" alt="Mensaje de la instalación satisfactoria" title="Indicativo de la instalación correcta" width="600" height="350"/>
+				<p>
+				Si queréis probar si funciona correctamente, podeis ir a la unidad <b>C:</b>, abrir un archivo de texto con <b>edit</b>, y vereis como podeis moveros por su intefaz con el ratón.
+				<br/><br/>
+				<i><b>IMPORTANTE!!</b></i> Este driver del ratón a veces puede "desactivarse" automaticamente al apagar la maquina virtual. Es por eso, que recomiendo copiar el driver a la unidad <b>C:</b>, y cada vez que iniciéis la maquina, lo ejecutéis para aseguraros de que funcione correctamente. Si no os acordáis de como copiar archivos, os recomiendo que miréis el apartado sobre <a href="listacommands.html"><i><b>Copia de archivos.</b></i></a>
+				</p>
+			</li>
+			<li>
+				<h4><b>Retirar el software cargado de la disquetera</b></h4>
+				<p>
+				Una cosa que debemos tener en cuenta es que a la hora de encender MS-DOS, debemos dejar siempre vacía la unidad de disquete <a href="softwaredos.html"><i><b>(Como veremos en el apartado de Instalacion de software)</b></i></a>. Para hacerlo es tan fácil como hacer click derecho sobre el disquete de la esquina derecha inferior, y entonces:
+				</p>
+				<img src="media/vaciar-disquetera.png" alt="Donde retirar el contenido de la disquetera" title="Opcion de vaciado de la disquetera"/>
+				<p>
+				Con este último paso hemos acabado con la instalación de drivers.
+				</p>
+			</li>
 		</ol>
-		
 	</body>
+	</br>
+	<text><i><b> 2022 - Software MS-DOS </b></i></text>
 </html>
