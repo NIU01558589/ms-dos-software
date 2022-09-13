@@ -19,7 +19,7 @@
 		<p>
 			Abrimos el ejecutable, y nos guaiará por una instalación. Dejamos todas las opciones por defecto, y finalizamos la instalación. Entonces nos vamos al escritorio, y abrimos VirtualBox. Al abrirlo nos aparecerá la siguiente pantalla:
 		</p>
-		<img src="https://www.virtualbox.org/manual/images/virtualbox-main-empty.png" alt="Imagen de inicio de VirtualBox" title="Inicio de VirtualBox" width="600" height="350"/>
+		<img src="https://www.virtualbox.org/manual/images/virtualbox-main-empty.png" alt="Imagen de inicio de VirtualBox" title="Inicio de VirtualBox" width="650" height="350"/>
 		<h3><b>Creación de la Maquina Virtual</b></h3>
 		<p>
 			Ahora debemos crear nuestra maquina virtual. Esto es porque de lo que se encarga VirtualBox es de "simular" un entorno de hardware idóneo para, por ejemplo, MS-DOS, ya que el hardware actual de nuestros daría muchas incopatibilidades de drivers, gestión de procesos o gestión de memoria, entre otros.
@@ -29,6 +29,65 @@
 		<p>
 			Una vez seleccionada, nos saldrá una ventana donde debemos escribir un nombre para nuestra maquina. En nombre es indiferente, sino que lo que importa es seleccionar el tipo de sistema operativo a instalar. Para seleccionar MS-DOS, escogemos en Tipo la opción <b>Other</b>, y en Versión <b>MS-DOS</b>
 		</p>
-		<img src="media/name-vm.png" alt="Seleccion del Nombre y Tipo de maquina virtual" title="Nombre y Tipo de maquina virtual" width="460" height="350"/>
+		<img src="media/name-vm.png" alt="Seleccion del Nombre y Tipo de maquina virtual" title="Nombre y Tipo de maquina virtual" width="430" height="350"/>
+		<p>
+			En el apartado de RAM, lo dejamos por defecto.
+		</p>
+		<img src="media/ram-ms-dos.png" alt="Seleccion de la Ram de la maquina virtual" title="Ram de la maquina virtual" width="430" height="350"/>
+		<p>
+			En la parte de creación de disco duro, lo dejamos como se encuentra, y le damos a crear. Nos saldrá una ventana, en la que presionaremos todos <b>Next</b> y <b>Crear</b> hasta finalizar el proceso.
+		</p>
+		<img src="media/crear-disco-duro.png" alt="Creación del disco duro" title="Disco duro de nuestra maquina virtual" width="430" height="350"/>
+		<p>
+			Nos aparecerá en la barra izquierda un simbolo indicandonos la maquina.
+		</p>
+		<h3><b>Instalación de MS-DOS 6.22</b></h3>
+		<h4><b>Descarga de los archivos necesarios</b></h4>
+		<p>
+			A continuación, dejo los archivos necesarios de instalación de MS-DOS (una de las versiones está en Español, mientras que la otra se encuentra en Inglés). Para utilizarlo, debéis descomprimirlo anteriormente.
+		</p>
+		<a href="archivos/Microsoft MS-DOS 6.22 [Español].zip">Microsoft MS-DOS 6.22 <b>(Español)</b></a>
+		<br/>
+		<a href="archivos/Microsoft MS-DOS 6.22 [Inglés].zip">Microsoft MS-DOS 6.22 <b>(Inglés)</b></a>
+		<h4><b>Instalación de MS-DOS 6.22</b></h4>
+		<p>
+			Para cargar los archivos de instalación en la maquina virtual, nos metemos en <b>Configuración</b>
+		</p>
+		<img src="media/config-virtualbox.png" alt="Icono de configuración" title="Icono de configuración" width="650" height="350"/>
+		<p>
+			Una vez dentro, nos vamos a <b>Almacenamiento</b>, y hacemos click sobre el floppy disk (marcado en rojo en la imagen), y posteriormente, clickamos el disquete (marcado en verde):
+		</p>
+		<img src="media/carga-floppy-msdos.png" alt="Imagen de la carga de Floppy" title="Carga de archivo de MS-DOS" width="480" height="350"/>
+		<p>
+			Se nos abrirá un desplegable, en el que tenemos que escoger <b>Seleccionar un archivo de disco..</b> Entonces nos vamos a la carpeta que hemos descomprimido anteriormente con los archivos de sistema. Seleccionamos el archivo <b>Disk 1</b>. Una vez hecho esto, nos saldrá cargado en la unidad, como se puede ver en la siguiente unidad:
+		</p>
+		<img src="media/disk-cargado.png" alt="Imagen de la unidad de Floppy cargada" title="Unidad de Floppy de Virtualbox Cargada con el archivo Disk 1" width="480" height="350"/>
+		<p>
+			Damos a <b>Aceptar</b> para cerrar la ventana, y damos al icono de Iniciar. VirtualBox abrirá una ventana, donde nos aparecerá en el centro MS-DOS 6.22. En caso de que nos aparezca la siguiente ventana, presionamos <b>Cancelar</b>, ya que nosotros ya tenemos cargado el archivo de imagen con el sistema operativo en la unidad <b>:A</b>.
+		</p>
+		<img src="media/seleccion-de-disco.png" alt="Pestaña a evitar en la instalación de MS-DOS" title="Pestaña de carga de archivos en la unidad D:" width="460" height="350"/>
+		<p>
+			Es ahora cuando comenzamos la instalación de MS-DOS. Nos aparecerá una pantalla de fondo azul. Esto es la guia de instalación del propio MS-DOS.
+		</p>
+		<img src="media/pantalla-azul-msdos.png" alt="Pantalla del instalador de MS-DOS" title="Instalador de MS-DOS" width="600" height="350"/>
+		<p>
+			A partir de este punto, el proceso de instalación viene guiado por este instalador, y basta con leer e ir avanzando en la instalación según nos va recomendando. Lo único que teneis que tener en cuenta es que llegado el último paso de la instalación, que es la instalación en el disco duro del sistema operativo y sus archivos, nos pedirá que cambiemos el disquette.
+		</p>
+		<img src="media/cambio-disquete.png" alt="Pantalla solicitando el cambio de disquete" title="Cambio de disquette del Instalador" width="600" height="350"/>
+		<p>
+			Esto se debe a que como el sistema operativo ocupaba varios megas, y un disquete únicamente tenía capacidad para 1.44Mb, se dividía en varios disquetes. Para cambiar el disquete, debemos irnos a la esquina derecha inferior, y seleccionar el disquette haciendo click derecho sobre él.
+		</p>
+		<img src="media/carga-disquete.jpg" alt="Simbolo de carga del disquete" title="Simbolo de carga del disquete"/>
+		<p>
+			En el desplegable, tenemos que escoger <b>Seleccionar un archivo de disco..</b>, y escoger el disquete que pide. En este caso por ejemplo solicita el <b>Disco 2</b>, asi que seleccionaremos el archivo llamado <b>Disk 2</b>.
+			<br/>
+			Este proceso se dará varias veces. Una vez finalice, nos pedirá retirar los discos de todas las unidades de disquete. Esto significa dejar vacías las disqueteras. Para vaciar la nuestra, la <b>:A</b>, haremos click derecho sobre el simbolo de la esquina derecha inferior (el mismo que en el apartado anterior), y seleccionamos <b>Eliminar disco de la unidad virtual</b>.
+		</p>
+		<img src="media/vaciar-disquetera.png" alt="Opcion de vaciado de la disquetera" title="Vaciado de la disquetera" width="400" height="220"/>
+		<p>
+			Una vez vaciada, seguimos las instrucciones del instalador, y nos aparecerá la pantalla de "inicio" de MS-DOS, desde la cual podremos escribir los comandos que queremos ejecutar.
+		</p>
+		<img src="media/pantalla-inicio.png" alt="Pantalla de inicio de MS-DOS" title="Pantalla de inicio de MS-DOS" width="600" height="350"/>
+		<h3><b>Uso de VirtualBox</b></h3>
 	</body>
 </html>
